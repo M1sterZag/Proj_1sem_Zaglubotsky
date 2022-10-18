@@ -9,3 +9,5 @@ def random_symbols(s):  # Функция, печатающая 40 символо
 
 
 random_symbols(input('Введите любой символ:'))  # Ввод символа
+
+print('hello world')
