@@ -27,5 +27,5 @@ def try_except(a):  # обработка исключений
 # print('Первый список чисел', *SortInc3(A1, B1, C1))  # вывод списка чисел
 # print('Второй список чисел', *SortInc3(A2, B2, C2))
 
-A1, B1, C1 = input('Введите A1: '), input('Введите B1: '), input('Введите C1: ')
-A2, B2, C2 = input('Введите A2: '), input('Введите B2: '), input('Введите C2: ')
+A1, B1, C1 = try_except(input('Введите A1: ')), try_except(input('Введите B1: ')), try_except(input('Введите C1: '))
+A2, B2, C2 = try_except(input('Введите A2: ')), try_except(input('Введите B2: ')), try_except(input('Введите C2: '))
