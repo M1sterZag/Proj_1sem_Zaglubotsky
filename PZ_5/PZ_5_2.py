@@ -7,8 +7,13 @@
 
 
 def SortInc3(a, b, c):  # сортировка переданных значений
-    if a < b:
+    if a > c:
+        a, c = c, a
+    if a > b:
         a, b = b, a
+    if b > c:
+        b, c = c, b
+    return a, b, c
 
 
 def try_except(a):  # обработка исключений
@@ -21,11 +26,8 @@ def try_except(a):  # обработка исключений
     return a
 
 
-# A1, B1, C1 = [try_except() for i in range(3)]  # ввод 3 чисел
-# A2, B2, C2 = [try_except() for x in range(3)]
-#
-# print('Первый список чисел', *SortInc3(A1, B1, C1))  # вывод списка чисел
-# print('Второй список чисел', *SortInc3(A2, B2, C2))
-
 A1, B1, C1 = try_except(input('Введите A1: ')), try_except(input('Введите B1: ')), try_except(input('Введите C1: '))
 A2, B2, C2 = try_except(input('Введите A2: ')), try_except(input('Введите B2: ')), try_except(input('Введите C2: '))
+
+print('Первый набор чисел: ', SortInc3(A1, B1, C1))
+print('Второй набор чисел: ', SortInc3(A2, B2, C2))
