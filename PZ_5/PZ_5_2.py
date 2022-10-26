@@ -6,14 +6,14 @@
 # набора из трех чисел: (А1, В1, С1) и (А2, В2, С2).
 
 
-def SortInc3(a, b, c):  # сортировка переданных значений
-    if a > c:
-        a, c = c, a
-    if a > b:
-        a, b = b, a
-    if b > c:
-        b, c = c, b
-    return a, b, c
+def SortInc3(A, B, C):  # сортировка переданных значений
+    if A > C:
+        A, C = C, A
+    if A > B:
+        A, B = B, A
+    if B > C:
+        B, C = C, B
+    return A, B, C
 
 
 def try_except(a):  # обработка исключений
