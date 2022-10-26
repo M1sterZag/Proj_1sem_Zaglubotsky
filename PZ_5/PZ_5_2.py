@@ -29,5 +29,5 @@ def try_except(a):  # обработка исключений
 A1, B1, C1 = try_except(input('Введите A1: ')), try_except(input('Введите B1: ')), try_except(input('Введите C1: '))
 A2, B2, C2 = try_except(input('Введите A2: ')), try_except(input('Введите B2: ')), try_except(input('Введите C2: '))
 
-print('Первый набор чисел: ', SortInc3(A1, B1, C1))
-print('Второй набор чисел: ', SortInc3(A2, B2, C2))
+print('Первый набор чисел:', SortInc3(A1, B1, C1))
+print('Второй набор чисел:', SortInc3(A2, B2, C2))
