@@ -21,19 +21,19 @@ def try_except_float(a):  # обработка исключений на float
     return a
 
 
-def spisok(a, b):
+def listing(a, b):  # составление списка со случайными числами
     x = 0
-    lst = []
+    c = []
     while x != a:
-        lst.append(random.randrange(0, b))
+        c.append(random.randrange(0, b))
         x += 1
-    return lst
+    return c
 
 
 N = try_except_int(input('Введите кол-во элементов списка: '))
 Z = try_except_float(input('Список будет формироваться с 0 и до '))
 R = try_except_float(input('Введите число R: '))
-lst = spisok(N, Z)
+lst = listing(N, Z)
 
 i = 0
 result = Z
@@ -49,4 +49,4 @@ while i != N:
 print('Список:', lst)
 print('Элемент списка наиболее близкий к R: ', result_number)
 
-# dodelat!
+# доделать!
