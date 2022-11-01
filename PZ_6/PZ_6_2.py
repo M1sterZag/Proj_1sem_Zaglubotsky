@@ -1,23 +1,21 @@
 import random
 
 
-def try_except_int(a):  # обработка исключений на int
-    while type(a) != int:
-        try:
-            a = int(a)
-        except ValueError:
-            print('Введите целое число!')
-            a = input()
-    return a
-
-
-def try_except_float(a):  # обработка исключений на float
-    while type(a) != float:
-        try:
-            a = float(a)
-        except ValueError:
-            print('Введите число!')
-            a = input()
+def try_except(a, b):  # обработка исключений на int или float
+    if b == int:
+        while type(a) != int:
+            try:
+                a = int(a)
+            except ValueError:
+                print('Введите целое число!')
+                a = input()
+    else:
+        while type(a) != float:
+            try:
+                a = float(a)
+            except ValueError:
+                print('Введите число!')
+                a = input()
     return a
 
 
@@ -30,23 +28,17 @@ def listing(a, b):  # составление списка со случайны�
     return c
 
 
-N = try_except_int(input('Введите кол-во элементов списка: '))
-Z = try_except_float(input('Список будет формироваться с 0 и до '))
-R = try_except_float(input('Введите число R: '))
-lst = listing(N, Z)
+N = try_except(input('Введите кол-во элементов списка: '), int)
+Z = try_except(input('Список будет формироваться из диапазона с 0 и до '), int)
+R = try_except(input('Введите число R: '), float)
+lst = listing(N, Z)  # формирование списка чисел
 
-i = 0
-result = Z
-result_number = 0
-while i != N:
-    if abs(lst[i] - R) > result:
-        result = abs(lst[i] - R)
-        result_number = lst[i]
-        i += 1
-    else:
-        i += 1
+result = lst[0]
+result_number = lst[0]
+for i in lst:
+    if abs(i - R) < abs(result_number - R):
+        result = abs(i - R)
+        result_number = i
 
-print('Список:', lst)
-print('Элемент списка наиболее близкий к R: ', result_number)
-
-# доделать!
+print(f'Список: {lst}')
+print(f'Элемент списка наиболее близкий к {R}: {result_number}')
