@@ -8,7 +8,7 @@ while type(N) != int:  # обработка исключений
         N = int(N)
     except ValueError:
         print('Введите целое число')
-        N = input()
+        N = input('Введите целое число! ')
 
 result = 1.1
 k = 1.2
